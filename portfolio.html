@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品集 - 我的个人博客</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">我的博客</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我</a></li>
+                <li><a href="portfolio.html" class="active">作品集</a></li>
+                <li><a href="contact.html">联系方式</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 作品集内容 -->
+    <section class="portfolio-section">
+        <div class="container">
+            <h1 class="page-title">我的作品集</h1>
+            <p class="page-subtitle">以下是我的一些精选项目，展示了我的技能和经验</p>
+
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="web">网站开发</button>
+                <button class="filter-btn" data-filter="app">应用开发</button>
+                <button class="filter-btn" data-filter="design">设计</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <span>项目图片</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>响应式网站项目</h3>
+                        <p>一个完全响应式的网站项目，使用现代前端技术栈开发，具有良好的用户体验。</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <a href="#" class="portfolio-link">查看详情 →</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="app">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <span>项目图片</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>移动应用开发</h3>
+                        <p>一款功能丰富的移动应用，提供流畅的用户界面和优秀的性能表现。</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+                        <a href="#" class="portfolio-link">查看详情 →</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="design">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <span>项目图片</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>UI/UX设计项目</h3>
+                        <p>一套完整的用户界面设计，注重用户体验和视觉美感，符合现代设计趋势。</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">UI设计</span>
+                        </div>
+                        <a href="#" class="portfolio-link">查看详情 →</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <span>项目图片</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>电商平台</h3>
+                        <p>一个功能完整的电商平台，包含用户管理、商品展示、购物车和支付功能。</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                        <a href="#" class="portfolio-link">查看详情 →</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="app">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <span>项目图片</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>数据分析工具</h3>
+                        <p>一个强大的数据分析工具，帮助用户可视化数据并生成详细的报告。</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">D3.js</span>
+                        </div>
+                        <a href="#" class="portfolio-link">查看详情 →</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="design">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder">
+                            <span>项目图片</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>品牌设计</h3>
+                        <p>为一家公司设计的完整品牌形象，包括Logo、色彩方案和视觉识别系统。</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">品牌设计</span>
+                            <span class="tag">Illustrator</span>
+                        </div>
+                        <a href="#" class="portfolio-link">查看详情 →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 我的个人博客. 保留所有权利.</p>
+            <div class="social-links">
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">微博</a>
+                <a href="#" class="social-link">邮箱</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
