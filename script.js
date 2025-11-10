@@ -141,6 +141,48 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.transition = 'opacity 0.6s, transform 0.6s';
         animateOnScroll.observe(card);
     });
+
+    // 图片放大功能
+    const imageModal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalClose = document.querySelector('.modal-close');
+    const portfolioImages = document.querySelectorAll('.portfolio-image img');
+
+    if (imageModal && modalImage && modalClose) {
+        // 点击图片打开模态框
+        portfolioImages.forEach(img => {
+            img.addEventListener('click', function() {
+                imageModal.classList.add('active');
+                modalImage.src = this.src;
+                modalImage.alt = this.alt;
+                document.body.style.overflow = 'hidden'; // 防止背景滚动
+            });
+        });
+
+        // 点击关闭按钮关闭模态框
+        modalClose.addEventListener('click', function() {
+            imageModal.classList.remove('active');
+            document.body.style.overflow = ''; // 恢复滚动
+        });
+
+        // 点击模态框背景关闭
+        imageModal.addEventListener('click', function(e) {
+            if (e.target === imageModal) {
+                imageModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // 按 ESC 键关闭模态框
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && imageModal.classList.contains('active')) {
+                imageModal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
 });
+
+
 
 
