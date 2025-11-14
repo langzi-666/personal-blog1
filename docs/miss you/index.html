@@ -3,53 +3,303 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miss You - 个人项目博客</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Miss You - 项目集合</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            min-height: 100vh;
+            color: #1f2937;
+        }
+        
+        /* 主要布局 - 左右结构 */
+        .main-layout {
+            padding: 1rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        /* 左侧边栏 */
+        .sidebar {
+            position: sticky;
+            top: 2rem;
+        }
+
+        .sidebar-content {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 右侧内容区域 */
+        .content-area {
+            min-height: 100vh;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #ffffff;
+            color: #2563eb;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .back-link:hover {
+            background: #2563eb;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .page-title {
+            font-size: 1.5rem;
+            text-align: left;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            color: #1f2937;
+        }
+        
+        .page-subtitle {
+            text-align: left;
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+            font-size: 0.9rem;
+        }
+        
+        .project-filters {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 0;
+        }
+        
+        .filter-btn {
+            padding: 0.75rem 1rem;
+            border: 1px solid #e5e7eb;
+            background: transparent;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+            text-align: left;
+            color: #1f2937;
+            font-weight: 500;
+        }
+        
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #ec4899;
+            color: white;
+            border-color: #ec4899;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .project-card {
+            background: #ffffff;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+            aspect-ratio: 3/4;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            border-color: #ec4899;
+        }
+        
+        .project-image {
+            height: 60%;
+            background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .project-number {
+            font-size: 3rem;
+            color: white;
+            font-weight: 700;
+        }
+        
+        .project-type {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .project-content {
+            padding: 1rem;
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .project-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.25rem;
+        }
+        
+        .project-description {
+            color: #6b7280;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+            font-size: 0.8rem;
+            flex-grow: 1;
+        }
+        
+        .project-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.25rem;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: #ec4899;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #be185d;
+            transform: translateY(-1px);
+        }
+        
+        .btn-secondary {
+            background: #f8fafc;
+            color: #6b7280;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .btn-secondary:hover {
+            background: #f1f5f9;
+            color: #1f2937;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .sidebar {
+                position: static;
+                order: 2;
+            }
+            
+            .content-area {
+                order: 1;
+            }
+            
+            .project-filters {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <!-- 头部 -->
-        <header class="header">
-            <div class="header-content">
-                <h1 class="logo">Miss You</h1>
-                <p class="tagline">个人项目展示 & 技术分享</p>
-            </div>
-            <div class="header-bg"></div>
-        </header>
-
-        <!-- 返回按钮 -->
-        <nav class="nav">
-            <div class="nav-content">
-                <a href="../../portfolio.html" class="back-btn">
-                    <i class="fas fa-arrow-left"></i> 返回作品集
-                </a>
-                <h2 class="nav-title">Miss You 项目集合</h2>
-            </div>
-        </nav>
-
-        <!-- 主要内容 -->
-        <main class="main">
-            <!-- 项目展示区域 -->
-            <section id="projects" class="projects-section">
-                <div class="section-header">
-                    <h2 class="section-title">Miss You 项目合集</h2>
-                    <p class="section-subtitle">点击任意项目查看详细内容</p>
+    <main class="main-layout">
+        <div class="container">
+            <!-- 左侧边栏 -->
+            <aside class="sidebar">
+                <div class="sidebar-content">
+                    <a href="../../index.html" class="back-link">
+                        <i class="fas fa-arrow-left"></i> 返回作品集
+                    </a>
+                    
+                    <h1 class="page-title">Miss You</h1>
+                    <p class="page-subtitle">Java桌面应用项目集合，包含多个爱心动画和窗口效果</p>
+                    
+                    <div class="project-filters">
+                        <button class="filter-btn active" data-filter="all">全部项目</button>
+                        <button class="filter-btn" data-filter="animation">动画效果</button>
+                        <button class="filter-btn" data-filter="window">窗口应用</button>
+                        <button class="filter-btn" data-filter="interactive">交互式</button>
+                    </div>
                 </div>
-                
+            </aside>
+
+            <!-- 右侧内容区域 -->
+            <section class="content-area">
                 <div class="projects-grid">
-                    <!-- Love Animation - 整合的爱心动画 -->
-                    <div class="project-card love-animation" data-project="love">
+                    <!-- 项目1 -->
+                    <div class="project-card" data-category="animation">
                         <div class="project-image">
-                            <div class="project-number">💖</div>
-                            <div class="project-preview">💖</div>
-                            <div class="project-overlay">
-                                <span class="project-type">爱心动画</span>
-                            </div>
+                            <div class="project-number">1</div>
+                            <div class="project-type">爱心动画</div>
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">Love Heart Animation</h3>
+                            <h3 class="project-title">基础爱心动画</h3>
+                            <p class="project-description">简单的爱心图案动画效果，展示基本的Java图形绘制能力。</p>
                             <div class="project-actions">
                                 <a href="1/index.html" class="btn btn-primary" target="_blank">
                                     <i class="fas fa-play"></i> 运行动画
@@ -58,193 +308,165 @@
                         </div>
                     </div>
 
-                    <!-- 项目 1 -->
-                    <div class="project-card" data-project="1">
-                        <div class="project-image" onclick="showProject(1)">
-                            <div class="project-number">01</div>
-                            <div class="project-preview">💖</div>
-                            <div class="project-overlay">
-                                <span class="project-type">项目 1</span>
-                            </div>
+                    <!-- 项目2 -->
+                    <div class="project-card" data-category="animation">
+                        <div class="project-image">
+                            <div class="project-number">2</div>
+                            <div class="project-type">动态效果</div>
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">粉色爱心雨</h3>
+                            <h3 class="project-title">动态爱心效果</h3>
+                            <p class="project-description">增强版爱心动画，包含更多动态效果和颜色变化。</p>
+                            <div class="project-actions">
+                                <a href="2/index.html" class="btn btn-primary" target="_blank">
+                                    <i class="fas fa-play"></i> 运行动画
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- 项目 2 -->
-                    <div class="project-card" data-project="2">
-                        <div class="project-image" onclick="showProject(2)">
-                            <div class="project-number">02</div>
-                            <div class="project-preview">🎨</div>
-                            <div class="project-overlay">
-                                <span class="project-type">项目 2</span>
-                            </div>
+                    <!-- 项目3 -->
+                    <div class="project-card" data-category="interactive">
+                        <div class="project-image">
+                            <div class="project-number">3</div>
+                            <div class="project-type">交互式</div>
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">创意动画</h3>
+                            <h3 class="project-title">交互式爱心</h3>
+                            <p class="project-description">支持用户交互的爱心动画，可以响应鼠标点击和移动。</p>
+                            <div class="project-actions">
+                                <a href="3/index.html" class="btn btn-primary" target="_blank">
+                                    <i class="fas fa-play"></i> 运行动画
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- 项目 3 -->
-                    <div class="project-card" data-project="3">
-                        <div class="project-image" onclick="showProject(3)">
-                            <div class="project-number">03</div>
-                            <div class="project-preview">🌟</div>
-                            <div class="project-overlay">
-                                <span class="project-type">项目 3</span>
-                            </div>
+                    <!-- 项目4 -->
+                    <div class="project-card" data-category="window">
+                        <div class="project-image">
+                            <div class="project-number">4</div>
+                            <div class="project-type">窗口应用</div>
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">创新项目</h3>
+                            <h3 class="project-title">多窗口显示</h3>
+                            <p class="project-description">创建多个窗口同时显示不同的爱心效果。</p>
+                            <div class="project-actions">
+                                <a href="4/index.html" class="btn btn-primary" target="_blank">
+                                    <i class="fas fa-play"></i> 运行动画
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- 项目 4 -->
-                    <div class="project-card" data-project="4">
-                        <div class="project-image" onclick="showProject(4)">
-                            <div class="project-number">04</div>
-                            <div class="project-preview">🚀</div>
-                            <div class="project-overlay">
-                                <span class="project-type">项目 4</span>
-                            </div>
+                    <!-- 项目5 -->
+                    <div class="project-card" data-category="animation">
+                        <div class="project-image">
+                            <div class="project-number">5</div>
+                            <div class="project-type">高级动画</div>
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">高性能应用</h3>
+                            <h3 class="project-title">高级爱心动画</h3>
+                            <p class="project-description">复杂的爱心动画效果，包含粒子系统和特效。</p>
+                            <div class="project-actions">
+                                <a href="5/index.html" class="btn btn-primary" target="_blank">
+                                    <i class="fas fa-play"></i> 运行动画
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- 项目 5 -->
-                    <div class="project-card" data-project="5">
-                        <div class="project-image" onclick="showProject(5)">
-                            <div class="project-number">05</div>
-                            <div class="project-preview">⚡</div>
-                            <div class="project-overlay">
-                                <span class="project-type">项目 5</span>
-                            </div>
+                    <!-- 项目6 -->
+                    <div class="project-card" data-category="interactive">
+                        <div class="project-image">
+                            <div class="project-number">6</div>
+                            <div class="project-type">自定义</div>
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">快速应用</h3>
+                            <h3 class="project-title">自定义爱心</h3>
+                            <p class="project-description">允许用户自定义爱心颜色、大小和动画速度。</p>
+                            <div class="project-actions">
+                                <a href="6/index.html" class="btn btn-primary" target="_blank">
+                                    <i class="fas fa-play"></i> 运行动画
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- 项目 6 -->
-                    <div class="project-card" data-project="6">
-                        <div class="project-image" onclick="showProject(6)">
-                            <div class="project-number">06</div>
-                            <div class="project-preview">🎯</div>
-                            <div class="project-overlay">
-                                <span class="project-type">项目 6</span>
-                            </div>
+                    <!-- 项目7 -->
+                    <div class="project-card" data-category="window">
+                        <div class="project-image">
+                            <div class="project-number">7</div>
+                            <div class="project-type">综合应用</div>
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">精准应用</h3>
+                            <h3 class="project-title">综合爱心应用</h3>
+                            <p class="project-description">集成多种功能的综合性爱心动画应用程序。</p>
+                            <div class="project-actions">
+                                <a href="7/index.html" class="btn btn-primary" target="_blank">
+                                    <i class="fas fa-play"></i> 运行动画
+                                </a>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- 项目 7 -->
-                    <div class="project-card" data-project="7">
-                        <div class="project-image" onclick="showProject(7)">
-                            <div class="project-number">07</div>
-                            <div class="project-preview">🎮</div>
-                            <div class="project-overlay">
-                                <span class="project-type">项目 7</span>
-                            </div>
+                    <!-- 项目8 -->
+                    <div class="project-card" data-category="animation">
+                        <div class="project-image">
+                            <div class="project-number">8</div>
+                            <div class="project-type">3D效果</div>
                         </div>
                         <div class="project-content">
-                            <h3 class="project-title">互动应用</h3>
-                        </div>
-                    </div>
-
-                    <!-- 项目 8 -->
-                    <div class="project-card" data-project="8">
-                        <div class="project-image" onclick="showProject(8)">
-                            <div class="project-number">08</div>
-                            <div class="project-preview">🔧</div>
-                            <div class="project-overlay">
-                                <span class="project-type">项目 8</span>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">工具应用</h3>
-                        </div>
-                    </div>
-
-                    <!-- 项目 9 -->
-                    <div class="project-card" data-project="9">
-                        <div class="project-image" onclick="showProject(9)">
-                            <div class="project-number">09</div>
-                            <div class="project-preview">📱</div>
-                            <div class="project-overlay">
-                                <span class="project-type">项目 9</span>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">移动应用</h3>
-                        </div>
-                    </div>
-
-                    <!-- 项目 10 - Java桌面应用 -->
-                    <div class="project-card featured" data-project="10">
-                        <div class="project-image" onclick="showProject(10)">
-                            <div class="project-number">10</div>
-                            <div class="project-preview">
-                                <i class="fab fa-java"></i>
-                            </div>
-                            <div class="project-overlay">
-                                <span class="project-type">Java 桌面应用</span>
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">彩色卡片窗口</h3>
-                            <div class="project-tags">
-                                <span class="tag">Java</span>
-                                <span class="tag">Swing</span>
-                                <span class="tag">GUI</span>
+                            <h3 class="project-title">3D爱心效果</h3>
+                            <p class="project-description">使用Java 2D API创建的伪3D爱心动画效果。</p>
+                            <div class="project-actions">
+                                <a href="8/index.html" class="btn btn-primary" target="_blank">
+                                    <i class="fas fa-play"></i> 运行动画
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-        </main>
+        </div>
+    </main>
 
-        <!-- 页脚 -->
-        <footer class="footer">
-            <div class="footer-content">
-                <p>&copy; 2024 Miss You Blog. 用 ❤️ 制作</p>
-            </div>
-        </footer>
-    </div>
-
-    <!-- 返回顶部按钮 -->
-    <button class="back-to-top" id="backToTop">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <script src="assets/js/main.js"></script>
     <script>
-        // 点击数字直接显示项目内容
-        function showProject(projectNumber) {
-            // 直接跳转到项目页面
-            window.open(projectNumber + '/index.html', '_blank');
-        }
-        
-        // 外部链接跳转
-        function openExternalLink(url) {
-            window.open(url, '_blank');
-        }
-        
-        // 添加点击效果样式
+        // 筛选功能
         document.addEventListener('DOMContentLoaded', function() {
-            const projectImages = document.querySelectorAll('.project-image');
-            projectImages.forEach(img => {
-                img.style.cursor = 'pointer';
-                img.addEventListener('mouseenter', function() {
-                    this.style.transform = 'scale(1.05)';
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const projectCards = document.querySelectorAll('.project-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 移除所有活动状态
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // 添加当前按钮的活动状态
+                    this.classList.add('active');
+
+                    const filterValue = this.getAttribute('data-filter');
+
+                    projectCards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'scale(1)';
+                            }, 10);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'scale(0.8)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
                 });
-                img.addEventListener('mouseleave', function() {
-                    this.style.transform = 'scale(1)';
-                });
+            });
+
+            // 初始化项目卡片
+            projectCards.forEach(card => {
+                card.style.transition = 'opacity 0.3s, transform 0.3s';
             });
         });
     </script>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人博客</title>
+    <title>作品集 - 我的个人博客</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,10 +12,7 @@
         <div class="container">
             <div class="nav-brand">我的博客</div>
             <ul class="nav-menu">
-                <li><a href="index.html" class="active">首页</a></li>
-                <li><a href="about.html">关于我</a></li>
-                <li><a href="portfolio.html">作品集</a></li>
-                <li><a href="contact.html">联系方式</a></li>
+                <li><a href="index.html" class="active">作品集</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -25,77 +22,169 @@
         </div>
     </nav>
 
-    <!-- 英雄区域 -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">你好，我是 <span class="highlight">你的名字</span></h1>
-            <p class="hero-subtitle">欢迎来到我的个人博客</p>
-            <p class="hero-description">这里记录着我的学习、工作和生活</p>
-            <div class="hero-buttons">
-                <a href="about.html" class="btn btn-primary">了解更多</a>
-                <a href="contact.html" class="btn btn-secondary">联系我</a>
+    <!-- 主要内容区域 - 仪表板布局 -->
+    <main class="dashboard-layout">
+        <!-- 左侧导航栏 -->
+        <aside class="sidebar-nav">
+            <div class="nav-header">
+                <h2 class="nav-title">作品集管理</h2>
             </div>
-        </div>
-        <div class="hero-image">
-            <div class="avatar-placeholder">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="100" cy="100" r="80" fill="#4a90e2"/>
-                    <text x="100" y="120" font-size="60" fill="white" text-anchor="middle">我</text>
-                </svg>
-            </div>
-        </div>
-    </section>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" data-filter="all">
+                    <i class="fas fa-th-large"></i>
+                    <span>全部项目</span>
+                </a>
+                <a href="#" class="nav-item" data-filter="desktop">
+                    <i class="fas fa-desktop"></i>
+                    <span>桌面应用</span>
+                </a>
+                <a href="#" class="nav-item" data-filter="web">
+                    <i class="fas fa-globe"></i>
+                    <span>Web系统</span>
+                </a>
+                <a href="#" class="nav-item" data-filter="management">
+                    <i class="fas fa-cogs"></i>
+                    <span>管理系统</span>
+                </a>
+                <a href="#" class="nav-item" data-filter="platform">
+                    <i class="fas fa-layer-group"></i>
+                    <span>平台应用</span>
+                </a>
+            </nav>
+        </aside>
 
-    <!-- 特色内容 -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">我的特色</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">💻</div>
-                    <h3>编程技能</h3>
-                    <p>熟练掌握多种编程语言和开发框架，致力于创造优秀的数字体验。</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h3>设计思维</h3>
-                    <p>注重用户体验和视觉设计，追求简洁美观的界面设计。</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📚</div>
-                    <h3>持续学习</h3>
-                    <p>保持对新技术的热情，不断学习并分享知识。</p>
-                </div>
+        <!-- 右侧主内容区 -->
+        <section class="main-content">
+            <!-- 欢迎区域 -->
+            <div class="welcome-section">
+                <h1 class="welcome-title">欢迎回来，系统管理员！</h1>
+                <p class="welcome-subtitle">今天是 2024年11月14日 星期四，祝您工作愉快！</p>
             </div>
-        </div>
-    </section>
 
-    <!-- 最新动态 -->
-    <section class="latest-posts">
-        <div class="container">
-            <h2 class="section-title">最新动态</h2>
-            <div class="posts-grid">
-                <article class="post-card">
-                    <div class="post-date">2024年1月</div>
-                    <h3>我的第一个项目</h3>
-                    <p>这是一个关于我的第一个重要项目的介绍，展示了我在开发过程中的思考和收获。</p>
-                    <a href="#" class="read-more">阅读更多 →</a>
-                </article>
-                <article class="post-card">
-                    <div class="post-date">2024年2月</div>
-                    <h3>技术学习心得</h3>
-                    <p>分享我在学习新技术过程中的心得体会，以及遇到的挑战和解决方案。</p>
-                    <a href="#" class="read-more">阅读更多 →</a>
-                </article>
-                <article class="post-card">
-                    <div class="post-date">2024年3月</div>
-                    <h3>生活随笔</h3>
-                    <p>记录生活中的点滴感悟，工作与生活的平衡，以及对未来的展望。</p>
-                    <a href="#" class="read-more">阅读更多 →</a>
-                </article>
+            <!-- 统计卡片 -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon desktop">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">桌面应用</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon web">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Web系统</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon management">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">管理系统</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon platform">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <div class="stat-info">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">平台应用</div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+
+            <!-- 快捷操作 -->
+            <div class="quick-actions">
+                <h3 class="section-title">快捷操作</h3>
+                <div class="actions-grid">
+                    <div class="action-item" data-category="desktop">
+                        <div class="action-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="action-title">Miss You</div>
+                        <div class="action-desc">Java桌面应用</div>
+                        <a href="docs/miss you/" class="action-link">查看详情</a>
+                    </div>
+                    
+                    <div class="action-item" data-category="management">
+                        <div class="action-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="action-title">图书管理</div>
+                        <div class="action-desc">图书管理系统</div>
+                        <a href="docs/library-system.html" class="action-link">查看详情</a>
+                    </div>
+                    
+                    <div class="action-item" data-category="management">
+                        <div class="action-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="action-title">学生管理</div>
+                        <div class="action-desc">学生管理系统</div>
+                        <a href="docs/student-system.html" class="action-link">查看详情</a>
+                    </div>
+                    
+                    <div class="action-item" data-category="platform">
+                        <div class="action-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="action-title">二手交易</div>
+                        <div class="action-desc">校园交易平台</div>
+                        <a href="docs/Campus second-hand trading platform/" class="action-link">查看详情</a>
+                    </div>
+                    
+                    <div class="action-item" data-category="web">
+                        <div class="action-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="action-title">食物分享</div>
+                        <div class="action-desc">食物分享系统</div>
+                        <a href="docs/Food sharing system/" class="action-link">查看详情</a>
+                    </div>
+                    
+                    <div class="action-item" data-category="platform">
+                        <div class="action-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="action-title">房屋租赁</div>
+                        <div class="action-desc">租赁管理平台</div>
+                        <a href="docs/Housing rental system/" class="action-link">查看详情</a>
+                    </div>
+                    
+                    <div class="action-item" data-category="web">
+                        <div class="action-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="action-title">健康管理</div>
+                        <div class="action-desc">个人健康系统</div>
+                        <a href="docs/Personal Health Management System/" class="action-link">查看详情</a>
+                    </div>
+                    
+                    <div class="action-item" data-category="platform">
+                        <div class="action-icon">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <div class="action-title">宠物领养</div>
+                        <div class="action-desc">宠物领养系统</div>
+                        <a href="docs/pet adoption system/" class="action-link">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- 图片放大模态框 -->
+    <div id="imageModal" class="image-modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage" src="" alt="放大图片">
+    </div>
 
     <!-- 页脚 -->
     <footer class="footer">
@@ -112,7 +201,6 @@
     <script src="script.js"></script>
 </body>
 </html>
-
 
 
 
