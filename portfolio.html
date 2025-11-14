@@ -29,144 +29,202 @@
     <section class="portfolio-section">
         <div class="container">
             <h1 class="page-title">我的作品集</h1>
-            <p class="page-subtitle">以下是我的一些精选项目，展示了我的技能和经验</p>
+            <p class="page-subtitle">以下是我开发的一些项目，涵盖了桌面应用、Web系统和管理平台</p>
 
             <div class="portfolio-filters">
                 <button class="filter-btn active" data-filter="all">全部</button>
-                <button class="filter-btn" data-filter="web">网站开发</button>
-                <button class="filter-btn" data-filter="app">应用开发</button>
-                <button class="filter-btn" data-filter="design">设计</button>
+                <button class="filter-btn" data-filter="desktop">桌面应用</button>
+                <button class="filter-btn" data-filter="web">Web系统</button>
+                <button class="filter-btn" data-filter="management">管理系统</button>
+                <button class="filter-btn" data-filter="platform">平台应用</button>
             </div>
 
             <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="design">
+                <!-- Miss You - Java桌面应用 -->
+                <div class="portfolio-item featured" data-category="desktop">
                     <div class="portfolio-image">
-                        <img src="docs/9BC4A83183796F6272C7668919C61E58.png" alt="作品 1" loading="lazy">
+                        <div class="project-preview">
+                            <div class="mock-windows">
+                                <div class="mini-window window-1"></div>
+                                <div class="mini-window window-2"></div>
+                                <div class="mini-window window-3"></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="portfolio-info">
-                        <h3>作品 1</h3>
-                        <p>我的设计作品展示</p>
+                        <h3>Miss You - 彩色卡片窗口</h3>
+                        <p>Java Swing桌面应用，在屏幕上显示多个彩色卡片窗口，每个窗口显示温馨的中文消息。支持窗口拖拽、随机大小和位置。</p>
                         <div class="portfolio-tags">
-                            <span class="tag">设计</span>
+                            <span class="tag">Java</span>
+                            <span class="tag">Swing</span>
+                            <span class="tag">桌面应用</span>
+                            <span class="tag">GUI</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="docs/miss you/" class="portfolio-link" target="_blank">查看详情</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="portfolio-item" data-category="design">
+                <!-- 图书管理系统 -->
+                <div class="portfolio-item" data-category="management">
                     <div class="portfolio-image">
-                        <img src="docs/A42E9F780AFA4CBCF0462243D961A4EE.png" alt="作品 2" loading="lazy">
+                        <img src="docs/library/1/01-首页.png" alt="图书管理系统" loading="lazy">
                     </div>
                     <div class="portfolio-info">
-                        <h3>作品 2</h3>
-                        <p>我的设计作品展示</p>
+                        <h3>图书管理系统</h3>
+                        <p>完整的图书馆管理系统，包含图书借阅、归还、查询、用户管理等功能。支持管理员和普通用户两种角色。</p>
                         <div class="portfolio-tags">
-                            <span class="tag">设计</span>
+                            <span class="tag">Web开发</span>
+                            <span class="tag">数据库</span>
+                            <span class="tag">用户管理</span>
+                            <span class="tag">CRUD</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="docs/library-system.html" class="portfolio-link" target="_blank">查看详情</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="portfolio-item" data-category="design">
+                <!-- 学生管理系统 -->
+                <div class="portfolio-item" data-category="management">
                     <div class="portfolio-image">
-                        <img src="docs/CE87D3BE83D3F759E0B034E067439E2B.png" alt="作品 3" loading="lazy">
+                        <img src="docs/student/1/2025_11_13_20_44_15.jpg" alt="学生管理系统" loading="lazy">
                     </div>
                     <div class="portfolio-info">
-                        <h3>作品 3</h3>
-                        <p>我的设计作品展示</p>
+                        <h3>学生管理系统</h3>
+                        <p>学校学生信息管理系统，包含学生档案管理、成绩录入、课程安排、班级管理等核心功能。</p>
                         <div class="portfolio-tags">
-                            <span class="tag">设计</span>
+                            <span class="tag">教育系统</span>
+                            <span class="tag">信息管理</span>
+                            <span class="tag">数据统计</span>
+                            <span class="tag">权限控制</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="docs/student-system.html" class="portfolio-link" target="_blank">查看详情</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="portfolio-item" data-category="design">
+                <!-- 校园二手交易平台 -->
+                <div class="portfolio-item" data-category="platform">
                     <div class="portfolio-image">
-                        <img src="docs/67D86BD4C67EC5640E127753B4A16992.png" alt="作品 4" loading="lazy">
+                        <img src="docs/9BC4A83183796F6272C7668919C61E58.png" alt="校园二手交易平台" loading="lazy">
                     </div>
                     <div class="portfolio-info">
-                        <h3>作品 4</h3>
-                        <p>我的设计作品展示</p>
+                        <h3>校园二手交易平台</h3>
+                        <p>专为校园用户设计的二手物品交易平台，支持商品发布、搜索、在线交流、安全交易等功能。</p>
                         <div class="portfolio-tags">
-                            <span class="tag">设计</span>
+                            <span class="tag">电商平台</span>
+                            <span class="tag">用户交互</span>
+                            <span class="tag">在线交易</span>
+                            <span class="tag">校园应用</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="docs/Campus second-hand trading platform/" class="portfolio-link" target="_blank">项目详情</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="portfolio-item" data-category="design">
+                <!-- 食物分享系统 -->
+                <div class="portfolio-item" data-category="web">
                     <div class="portfolio-image">
-                        <img src="docs/E8F7B137684F7C3B0636EB32CFDC7F28.png" alt="作品 5" loading="lazy">
+                        <img src="docs/A42E9F780AFA4CBCF0462243D961A4EE.png" alt="食物分享系统" loading="lazy">
                     </div>
                     <div class="portfolio-info">
-                        <h3>作品 5</h3>
-                        <p>我的设计作品展示</p>
+                        <h3>食物分享系统</h3>
+                        <p>促进食物共享、减少浪费的社区平台。用户可以发布多余食物信息，其他用户可以申请获取，建立绿色共享社区。</p>
                         <div class="portfolio-tags">
-                            <span class="tag">设计</span>
+                            <span class="tag">社区平台</span>
+                            <span class="tag">环保理念</span>
+                            <span class="tag">资源共享</span>
+                            <span class="tag">社交功能</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="docs/Food sharing system/" class="portfolio-link" target="_blank">项目详情</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="portfolio-item" data-category="design">
+                <!-- 房屋租赁系统 -->
+                <div class="portfolio-item" data-category="platform">
                     <div class="portfolio-image">
-                        <img src="docs/E11A4BEA1D06D39688E5F7DEC869F363.png" alt="作品 6" loading="lazy">
+                        <img src="docs/CE87D3BE83D3F759E0B034E067439E2B.png" alt="房屋租赁系统" loading="lazy">
                     </div>
                     <div class="portfolio-info">
-                        <h3>作品 6</h3>
-                        <p>我的设计作品展示</p>
+                        <h3>房屋租赁系统</h3>
+                        <p>在线房屋租赁管理平台，支持房源发布、搜索筛选、预约看房、合同管理、租金支付等完整租赁流程。</p>
                         <div class="portfolio-tags">
-                            <span class="tag">设计</span>
+                            <span class="tag">租赁平台</span>
+                            <span class="tag">房产管理</span>
+                            <span class="tag">在线支付</span>
+                            <span class="tag">合同管理</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="docs/Housing rental system/" class="portfolio-link" target="_blank">项目详情</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="portfolio-item" data-category="design">
+                <!-- 个人健康管理系统 -->
+                <div class="portfolio-item" data-category="web">
                     <div class="portfolio-image">
-                        <img src="docs/F19927E066AB92FBE0C7312785570835.png" alt="作品 7" loading="lazy">
+                        <img src="docs/67D86BD4C67EC5640E127753B4A16992.png" alt="个人健康管理系统" loading="lazy">
                     </div>
                     <div class="portfolio-info">
-                        <h3>作品 7</h3>
-                        <p>我的设计作品展示</p>
+                        <h3>个人健康管理系统</h3>
+                        <p>个人健康数据记录和分析系统，支持健康指标监测、运动记录、饮食管理、健康报告生成等功能。</p>
                         <div class="portfolio-tags">
-                            <span class="tag">设计</span>
+                            <span class="tag">健康管理</span>
+                            <span class="tag">数据分析</span>
+                            <span class="tag">个人应用</span>
+                            <span class="tag">可视化</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="docs/Personal Health Management System/" class="portfolio-link" target="_blank">项目详情</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="portfolio-item" data-category="design">
+                <!-- 宠物领养系统 -->
+                <div class="portfolio-item" data-category="platform">
                     <div class="portfolio-image">
-                        <img src="docs/58751C921568317406D84968A4FEF7DB.png" alt="作品 8" loading="lazy">
+                        <img src="docs/E8F7B137684F7C3B0636EB32CFDC7F28.png" alt="宠物领养系统" loading="lazy">
                     </div>
                     <div class="portfolio-info">
-                        <h3>作品 8</h3>
-                        <p>我的设计作品展示</p>
+                        <h3>宠物领养系统</h3>
+                        <p>宠物救助和领养信息平台，连接救助机构、志愿者和领养家庭，促进流浪动物找到温暖的家。</p>
                         <div class="portfolio-tags">
-                            <span class="tag">设计</span>
+                            <span class="tag">公益平台</span>
+                            <span class="tag">动物保护</span>
+                            <span class="tag">信息匹配</span>
+                            <span class="tag">社会责任</span>
+                        </div>
+                        <div class="portfolio-links">
+                            <a href="docs/pet adoption system/" class="portfolio-link" target="_blank">项目详情</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="portfolio-item" data-category="design">
-                    <div class="portfolio-image">
-                        <img src="docs/A247E63E0FCB029E17BAC80C8346066B.png" alt="作品 9" loading="lazy">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>作品 9</h3>
-                        <p>我的设计作品展示</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">设计</span>
-                        </div>
-                    </div>
-                </div>
+            </div>
 
-                <div class="portfolio-item" data-category="design">
-                    <div class="portfolio-image">
-                        <img src="docs/C4FE5E94AC6EDE3754B05AB5E14D967A.png" alt="作品 10" loading="lazy">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>作品 10</h3>
-                        <p>我的设计作品展示</p>
-                        <div class="portfolio-tags">
-                            <span class="tag">设计</span>
-                        </div>
-                    </div>
+            <!-- 项目统计 -->
+            <div class="portfolio-stats">
+                <div class="stat-item">
+                    <div class="stat-number">8+</div>
+                    <div class="stat-label">完成项目</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">技术领域</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">开发小时</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">使用技术</div>
                 </div>
             </div>
         </div>
