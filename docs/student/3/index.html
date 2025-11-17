@@ -143,23 +143,6 @@
             color: rgba(255, 255, 255, 0.4);
         }
         
-        .view-full {
-            background: rgba(255, 255, 255, 0.1);
-            color: #ffffff;
-            padding: 6px 15px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 0.8rem;
-            font-weight: 400;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .view-full:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-        
         /* 模态框样式 */
         .modal {
             display: none;
@@ -181,16 +164,40 @@
             max-width: 1200px;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
         }
         
         .modal img {
             max-width: 100%;
-            max-height: 90vh;
+            max-height: 70vh;
             object-fit: contain;
             border-radius: 10px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+        
+        .modal-text {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 30px;
+            border-radius: 10px;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .modal-text h3 {
+            color: #2d3748;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .modal-text p {
+            color: #718096;
+            font-size: 1rem;
+            line-height: 1.6;
         }
         
         .close {
@@ -262,43 +269,34 @@
         <div class="gallery-container">
             <div class="gallery-grid">
                 <div class="image-card">
-                    <img src="2025_11_13_21_39_08.jpg" alt="数据管理界面1" onclick="openModal(this)">
+                    <img src="2025_11_13_21_39_08.jpg" alt="数据管理界面1" onclick="openModal(this, '数据管理界面1', '数据录入和编辑功能展示')">
                     <div class="image-info">
                         <h3>数据管理界面1</h3>
                         <p>数据录入和编辑功能展示</p>
                         <div class="image-meta">
                             <span class="image-size">数据录入</span>
-                            <a href="2025_11_13_21_39_08.jpg" class="view-full" target="_blank">
-                                <i class="fas fa-expand"></i> 查看原图
-                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_21_39_58.jpg" alt="数据管理界面2" onclick="openModal(this)">
+                    <img src="2025_11_13_21_39_58.jpg" alt="数据管理界面2" onclick="openModal(this, '数据管理界面2', '数据查询和筛选功能')">
                     <div class="image-info">
                         <h3>数据管理界面2</h3>
                         <p>数据查询和筛选功能</p>
                         <div class="image-meta">
                             <span class="image-size">数据查询</span>
-                            <a href="2025_11_13_21_39_58.jpg" class="view-full" target="_blank">
-                                <i class="fas fa-expand"></i> 查看原图
-                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_21_40_45.jpg" alt="数据管理界面3" onclick="openModal(this)">
+                    <img src="2025_11_13_21_40_45.jpg" alt="数据管理界面3" onclick="openModal(this, '数据管理界面3', '数据统计和分析报表')">
                     <div class="image-info">
                         <h3>数据管理界面3</h3>
                         <p>数据统计和分析报表</p>
                         <div class="image-meta">
                             <span class="image-size">数据分析</span>
-                            <a href="2025_11_13_21_40_45.jpg" class="view-full" target="_blank">
-                                <i class="fas fa-expand"></i> 查看原图
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -311,16 +309,25 @@
         <span class="close" onclick="closeModal()">&times;</span>
         <div class="modal-content">
             <img id="modalImage" src="" alt="">
+            <div class="modal-text" id="modalText">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+            </div>
         </div>
     </div>
 
     <script>
-        function openModal(img) {
+        function openModal(img, title, description) {
             const modal = document.getElementById('imageModal');
             const modalImg = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDescription = document.getElementById('modalDescription');
+            
             modal.style.display = 'block';
             modalImg.src = img.src;
             modalImg.alt = img.alt;
+            modalTitle.textContent = title;
+            modalDescription.textContent = description;
         }
 
         function closeModal() {

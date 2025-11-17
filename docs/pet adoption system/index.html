@@ -158,6 +158,70 @@
             margin-top: 1rem;
         }
         
+        .screenshots {
+            background: #ffffff;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+        }
+        
+        .screenshots h2 {
+            text-align: center;
+            color: #1f2937;
+            margin-bottom: 2rem;
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+        
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .screenshot-item {
+            background: #f3e8ff;
+            padding: 1.5rem;
+            text-align: center;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid #e9d5ff;
+        }
+        
+        .screenshot-item:hover {
+            background: #e9d5ff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(124, 58, 237, 0.2);
+        }
+        
+        .screenshot-item h3 {
+            color: #6b21a8;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        .screenshot-item a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #7c3aed;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .screenshot-item a:hover {
+            background: #6d28d9;
+            transform: translateY(-1px);
+        }
+        
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -170,69 +234,28 @@
             .container {
                 padding: 1rem;
             }
+            
+            .screenshot-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="../../portfolio.html" class="back-link">
+        <a href="../../index.html" class="back-link">
             <i class="fas fa-arrow-left"></i> 返回作品集
         </a>
-        
-        <div class="hero">
-            <h1>宠物领养系统</h1>
-            <p>连接爱心，为流浪动物寻找温暖的家</p>
-        </div>
 
-        <div class="project-info">
-            <h2>项目概述</h2>
-            <p>宠物领养系统是一个专注于宠物救助和领养的公益平台。系统连接救助机构、志愿者和领养家庭，通过信息匹配和流程管理，帮助流浪动物找到温暖的家。平台致力于提高领养成功率，减少流浪动物数量，传播动物保护理念。</p>
-            
-            <div class="status-badge">
-                <i class="fas fa-check-circle"></i>
-                项目已完成
-            </div>
-            
-            <div class="tech-stack">
-                <span class="tech-tag">Angular</span>
-                <span class="tech-tag">Spring Boot</span>
-                <span class="tech-tag">MySQL</span>
-                <span class="tech-tag">阿里云OSS</span>
-                <span class="tech-tag">微信小程序</span>
-            </div>
-        </div>
-
-        <div class="features">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-paw"></i>
+        <div class="screenshots">
+            <h2>系统截图展示</h2>
+            <div class="screenshot-grid">
+                <div class="screenshot-item">
+                    <h3>领养流程界面</h3>
+                    <a href="1/">
+                        <i class="fas fa-image"></i> 查看详细截图
+                    </a>
                 </div>
-                <h3>宠物信息</h3>
-                <p>详细的宠物档案管理，包括品种、年龄、健康状况、性格特点等信息</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-heart"></i>
-                </div>
-                <h3>领养匹配</h3>
-                <p>智能匹配系统，根据领养者条件和宠物特点进行最佳匹配推荐</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-users"></i>
-                </div>
-                <h3>机构管理</h3>
-                <p>救助机构入驻管理，志愿者招募，领养流程跟踪和管理</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <h3>移动应用</h3>
-                <p>微信小程序支持，随时随地浏览宠物信息，便捷的领养申请流程</p>
             </div>
         </div>
     </div>

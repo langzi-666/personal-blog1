@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>学生管理系统 - 详细截图</title>
+    <title>个人健康管理系统 - 系统截图</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -16,7 +16,7 @@
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
             line-height: 1.6;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);
             min-height: 100vh;
             color: #333;
         }
@@ -59,7 +59,7 @@
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 10px;
-            background: linear-gradient(45deg, #fff, #f0f0f0);
+            background: linear-gradient(45deg, #fff, #e0f2fe);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -144,7 +144,6 @@
             color: #a0aec0;
         }
         
-        /* 模态框样式 */
         .modal {
             display: none;
             position: fixed;
@@ -214,7 +213,7 @@
         }
         
         .close:hover {
-            color: #667eea;
+            color: #bae6fd;
         }
         
         @media (max-width: 768px) {
@@ -249,134 +248,200 @@
 </head>
 <body>
     <div class="container">
-        <a href="../../student-system.html" class="back-link">
+        <a href="../index.html" class="back-link">
             <i class="fas fa-arrow-left"></i> 返回系统介绍
         </a>
         
         <div class="header">
-            <h1>学生管理系统截图</h1>
-            <p>详细功能界面展示</p>
+            <h1>个人健康管理系统截图</h1>
+            <p>覆盖用户端记录、健康洞察以及后台监控的全流程界面</p>
         </div>
 
         <div class="gallery-container">
             <div class="gallery-grid">
                 <div class="image-card">
-                    <img src="2025_11_13_20_44_15.jpg" alt="系统主界面" onclick="openModal(this, '系统主界面', '学生管理系统的主控制面板，提供清晰的导航和功能入口')">
+                    <img src="../首页.png" alt="系统首页" onclick="openModal(this, '系统首页', '展示健康概览、当日任务与快速入口的门户界面。')">
                     <div class="image-info">
-                        <h3>系统主界面</h3>
-                        <p>学生管理系统的主控制面板，提供清晰的导航和功能入口</p>
+                        <h3>系统首页</h3>
+                        <p>展示健康概览、当日任务与快速入口的门户界面。</p>
                         <div class="image-meta">
-                            <span class="image-size">主界面截图</span>
+                            <span class="image-size">整体概览</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_20_44_39.jpg" alt="学生信息管理" onclick="openModal(this, '学生信息管理', '完整的学生档案管理界面，支持信息录入、编辑和查询')">
+                    <img src="../登录页.png" alt="登录页" onclick="openModal(this, '安全登录', '支持多因素认证与企业单点登录，确保数据安全。')">
                     <div class="image-info">
-                        <h3>学生信息管理</h3>
-                        <p>完整的学生档案管理界面，支持信息录入、编辑和查询</p>
+                        <h3>安全登录</h3>
+                        <p>支持多因素认证与企业单点登录，确保数据安全。</p>
                         <div class="image-meta">
-                            <span class="image-size">信息管理</span>
+                            <span class="image-size">认证入口</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_20_44_51.jpg" alt="成绩管理" onclick="openModal(this, '成绩管理', '智能成绩录入和统计分析系统，支持多维度数据展示')">
+                    <img src="../注册页.png" alt="注册页" onclick="openModal(this, '快速注册', '完善基础信息、健康目标与隐私协议的引导式流程。')">
                     <div class="image-info">
-                        <h3>成绩管理</h3>
-                        <p>智能成绩录入和统计分析系统，支持多维度数据展示</p>
+                        <h3>快速注册</h3>
+                        <p>完善基础信息、健康目标与隐私协议的引导式流程。</p>
                         <div class="image-meta">
-                            <span class="image-size">成绩系统</span>
+                            <span class="image-size">注册流程</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_20_45_02.jpg" alt="课程管理" onclick="openModal(this, '课程管理', '灵活的课程安排和时间表管理系统')">
+                    <img src="../仪表板.png" alt="健康仪表板" onclick="openModal(this, '健康仪表板', '核心指标一目了然，包括活跃度、睡眠、饮食与提醒。')">
                     <div class="image-info">
-                        <h3>课程管理</h3>
-                        <p>灵活的课程安排和时间表管理系统</p>
+                        <h3>健康仪表板</h3>
+                        <p>核心指标一目了然，包括活跃度、睡眠、饮食与提醒。</p>
                         <div class="image-meta">
-                            <span class="image-size">课程系统</span>
+                            <span class="image-size">数据驾驶舱</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_20_45_13.jpg" alt="班级管理" onclick="openModal(this, '班级管理', '高效的班级组织和学生分配管理界面')">
+                    <img src="../体重记录.png" alt="体重记录" onclick="openModal(this, '体重记录', '支持手动录入与智能硬件同步，展示趋势与目标达成。')">
                     <div class="image-info">
-                        <h3>班级管理</h3>
-                        <p>高效的班级组织和学生分配管理界面</p>
+                        <h3>体重记录</h3>
+                        <p>支持手动录入与智能硬件同步，展示趋势与目标达成。</p>
                         <div class="image-meta">
-                            <span class="image-size">班级系统</span>
+                            <span class="image-size">身体指标</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_20_45_41.jpg" alt="数据统计" onclick="openModal(this, '数据统计', '可视化数据分析和智能报表生成功能')">
+                    <img src="../血压记录.png" alt="血压记录" onclick="openModal(this, '血压记录', '自动计算脉压、平均压，异常时即时触发警报。')">
                     <div class="image-info">
-                        <h3>数据统计</h3>
-                        <p>可视化数据分析和智能报表生成功能</p>
+                        <h3>血压记录</h3>
+                        <p>自动计算脉压、平均压，异常时即时触发警报。</p>
                         <div class="image-meta">
-                            <span class="image-size">统计报表</span>
+                            <span class="image-size">生命体征</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_20_45_50.jpg" alt="系统设置" onclick="openModal(this, '系统设置', '系统配置和权限管理界面')">
+                    <img src="../血糖记录.png" alt="血糖记录" onclick="openModal(this, '血糖记录', '记录空腹/餐后血糖，生成周报并给出饮食建议。')">
+                    <div class="image-info">
+                        <h3>血糖记录</h3>
+                        <p>记录空腹/餐后血糖，生成周报并给出饮食建议。</p>
+                        <div class="image-meta">
+                            <span class="image-size">慢病管理</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <img src="../睡眠记录.png" alt="睡眠记录" onclick="openModal(this, '睡眠记录', '展示深浅睡比例、入睡时长以及改善建议。')">
+                    <div class="image-info">
+                        <h3>睡眠记录</h3>
+                        <p>展示深浅睡比例、入睡时长以及改善建议。</p>
+                        <div class="image-meta">
+                            <span class="image-size">睡眠分析</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <img src="../运动记录.png" alt="运动记录" onclick="openModal(this, '运动记录', '同步可穿戴设备，展示卡路里、心率区间与路线。')">
+                    <div class="image-info">
+                        <h3>运动记录</h3>
+                        <p>同步可穿戴设备，展示卡路里、心率区间与路线。</p>
+                        <div class="image-meta">
+                            <span class="image-size">运动分析</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <img src="../饮食记录.png" alt="饮食记录" onclick="openModal(this, '饮食记录', '智能识别食材营养，生成热量/宏量营养素统计。')">
+                    <div class="image-info">
+                        <h3>饮食记录</h3>
+                        <p>智能识别食材营养，生成热量/宏量营养素统计。</p>
+                        <div class="image-meta">
+                            <span class="image-size">饮食管理</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <img src="../心理健康记录.png" alt="心理健康记录" onclick="openModal(this, '心理健康', '量化情绪状态，关联冥想课程与咨询预约入口。')">
+                    <div class="image-info">
+                        <h3>心理健康</h3>
+                        <p>量化情绪状态，关联冥想课程与咨询预约入口。</p>
+                        <div class="image-meta">
+                            <span class="image-size">心理关怀</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <img src="../提醒管理.png" alt="提醒管理" onclick="openModal(this, '提醒管理', '自定义用药、复诊、运动等提醒，支持多渠道推送。')">
+                    <div class="image-info">
+                        <h3>提醒管理</h3>
+                        <p>自定义用药、复诊、运动等提醒，支持多渠道推送。</p>
+                        <div class="image-meta">
+                            <span class="image-size">任务提醒</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <img src="../告警管理.png" alt="告警管理" onclick="openModal(this, '告警管理', '集中查看高危事件，支持确认、升级与分派医生。')">
+                    <div class="image-info">
+                        <h3>告警管理</h3>
+                        <p>集中查看高危事件，支持确认、升级与分派医生。</p>
+                        <div class="image-meta">
+                            <span class="image-size">风险监控</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <img src="../数据分析.png" alt="数据分析" onclick="openModal(this, '数据分析', '多维健康数据联动分析，辅助医生和教练制定方案。')">
+                    <div class="image-info">
+                        <h3>数据分析</h3>
+                        <p>多维健康数据联动分析，辅助医生和教练制定方案。</p>
+                        <div class="image-meta">
+                            <span class="image-size">智能洞察</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <img src="../健康建议.png" alt="健康建议" onclick="openModal(this, '健康建议', '结合 AI 与专家推荐，输出可执行的个性化改善计划。')">
+                    <div class="image-info">
+                        <h3>健康建议</h3>
+                        <p>结合 AI 与专家推荐，输出可执行的个性化改善计划。</p>
+                        <div class="image-meta">
+                            <span class="image-size">AI 建议</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <img src="../通知中心.png" alt="通知中心" onclick="openModal(this, '通知中心', '统一收纳提醒、告警、系统公告与医生留言。')">
+                    <div class="image-info">
+                        <h3>通知中心</h3>
+                        <p>统一收纳提醒、告警、系统公告与医生留言。</p>
+                        <div class="image-meta">
+                            <span class="image-size">消息聚合</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <img src="../设置.png" alt="系统设置" onclick="openModal(this, '系统设置', '个性化偏好、隐私权限、设备管理一站式配置。')">
                     <div class="image-info">
                         <h3>系统设置</h3>
-                        <p>系统配置和权限管理界面</p>
+                        <p>个性化偏好、隐私权限、设备管理一站式配置。</p>
                         <div class="image-meta">
-                            <span class="image-size">系统配置</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="image-card">
-                    <img src="2025_11_13_20_46_05.jpg" alt="用户管理" onclick="openModal(this, '用户管理', '系统用户和角色权限管理功能')">
-                    <div class="image-info">
-                        <h3>用户管理</h3>
-                        <p>系统用户和角色权限管理功能</p>
-                        <div class="image-meta">
-                            <span class="image-size">用户系统</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="image-card">
-                    <img src="2025_11_13_20_46_14.jpg" alt="报表生成" onclick="openModal(this, '报表生成', '自定义报表生成和导出功能')">
-                    <div class="image-info">
-                        <h3>报表生成</h3>
-                        <p>自定义报表生成和导出功能</p>
-                        <div class="image-meta">
-                            <span class="image-size">报表系统</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="image-card">
-                    <img src="2025_11_13_20_46_25.jpg" alt="数据导入" onclick="openModal(this, '数据导入', '批量数据导入和处理功能界面')">
-                    <div class="image-info">
-                        <h3>数据导入</h3>
-                        <p>批量数据导入和处理功能界面</p>
-                        <div class="image-meta">
-                            <span class="image-size">数据处理</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="image-card">
-                    <img src="2025_11_13_20_46_35.jpg" alt="系统监控" onclick="openModal(this, '系统监控', '系统运行状态监控和性能分析')">
-                    <div class="image-info">
-                        <h3>系统监控</h3>
-                        <p>系统运行状态监控和性能分析</p>
-                        <div class="image-meta">
-                            <span class="image-size">系统监控</span>
+                            <span class="image-size">偏好设置</span>
                         </div>
                     </div>
                 </div>
@@ -384,7 +449,6 @@
         </div>
     </div>
 
-    <!-- 模态框 -->
     <div id="imageModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
         <div class="modal-content">
@@ -415,7 +479,6 @@
             modal.style.display = 'none';
         }
 
-        // 点击模态框背景关闭
         window.onclick = function(event) {
             const modal = document.getElementById('imageModal');
             if (event.target === modal) {
@@ -423,7 +486,6 @@
             }
         }
 
-        // ESC键关闭模态框
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 closeModal();
@@ -432,3 +494,4 @@
     </script>
 </body>
 </html>
+

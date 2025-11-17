@@ -144,22 +144,6 @@
             color: #a0aec0;
         }
         
-        .view-full {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 6px 15px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 0.8rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        .view-full:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-        
         /* 模态框样式 */
         .modal {
             display: none;
@@ -181,16 +165,40 @@
             max-width: 1200px;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
         }
         
         .modal img {
             max-width: 100%;
-            max-height: 90vh;
+            max-height: 70vh;
             object-fit: contain;
             border-radius: 10px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+        
+        .modal-text {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 30px;
+            border-radius: 10px;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .modal-text h3 {
+            color: #2d3748;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .modal-text p {
+            color: #718096;
+            font-size: 1rem;
+            line-height: 1.6;
         }
         
         .close {
@@ -253,239 +261,188 @@
         <div class="gallery-container">
             <div class="gallery-grid">
                 <div class="image-card">
-                    <img src="01-首页.png" alt="系统首页" onclick="openModal(this)">
+                    <img src="01-首页.png" alt="系统首页" onclick="openModal(this, '系统首页', '图书管理系统的主页面，展示系统概览和主要功能入口')">
                     <div class="image-info">
                         <h3>系统首页</h3>
                         <p>图书管理系统的主页面，展示系统概览和主要功能入口</p>
                         <div class="image-meta">
                             <span class="image-size">首页界面</span>
-                            <a href="01-首页.png" class="view-full" target="_blank">
-                                <i class="fas fa-expand"></i> 查看原图
-                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="02-登录页.png" alt="用户登录" onclick="openModal(this)">
+                    <img src="02-登录页.png" alt="用户登录" onclick="openModal(this, '用户登录', '用户登录界面，支持管理员和普通用户登录')">
                     <div class="image-info">
                         <h3>用户登录</h3>
                         <p>用户登录界面，支持管理员和普通用户登录</p>
                         <div class="image-meta">
                             <span class="image-size">登录界面</span>
-                            <a href="02-登录页.png" class="view-full" target="_blank">
-                                <i class="fas fa-expand"></i> 查看原图
-                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="03-注册页.png" alt="用户注册" onclick="openModal(this)">
+                    <img src="03-注册页.png" alt="用户注册" onclick="openModal(this, '用户注册', '新用户注册界面，完善个人信息和账户设置')">
                     <div class="image-info">
                         <h3>用户注册</h3>
                         <p>新用户注册界面，完善个人信息和账户设置</p>
                         <div class="image-meta">
                             <span class="image-size">注册界面</span>
-                            <a href="03-注册页.png" class="view-full" target="_blank">
-                                <i class="fas fa-expand"></i> 查看原图
-                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="09-管理员首页-需要登录.png" alt="管理员首页" onclick="openModal(this)">
+                    <img src="09-管理员首页-需要登录.png" alt="管理员首页" onclick="openModal(this, '管理员首页', '管理员专用控制面板，提供系统管理功能')">
                     <div class="image-info">
                         <h3>管理员首页</h3>
                         <p>管理员专用控制面板，提供系统管理功能</p>
                         <div class="image-meta">
                             <span class="image-size">管理界面</span>
-                            <a href="09-管理员首页-需要登录.png" class="view-full" target="_blank">
-                                <i class="fas fa-expand"></i> 查看原图
-                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_19_13_03.jpg" alt="图书检索" onclick="openModal(this)">
+                    <img src="2025_11_13_19_13_03.jpg" alt="图书检索" onclick="openModal(this, '图书检索', '图书搜索和检索功能界面')">
                     <div class="image-info">
                         <h3>图书检索</h3>
                         <p>图书搜索和检索功能界面</p>
                         <div class="image-meta">
                             <span class="image-size">检索功能</span>
-                            <a href="2025_11_13_19_13_03.jpg" class="view-full" target="_blank">
-                                <i class="fas fa-expand"></i> 查看原图
-                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_19_13_45.jpg" alt="图书管理" onclick="openModal(this)">
+                    <img src="2025_11_13_19_13_45.jpg" alt="图书管理" onclick="openModal(this, '图书管理', '图书信息管理和编辑功能')">
                     <div class="image-info">
                         <h3>图书管理</h3>
                         <p>图书信息管理和编辑功能</p>
                         <div class="image-meta">
                             <span class="image-size">管理功能</span>
-                            <a href="2025_11_13_19_13_45.jpg" class="view-full" target="_blank">
-                                <i class="fas fa-expand"></i> 查看原图
-                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_19_14_01.jpg" alt="借阅管理" onclick="openModal(this)">
+                    <img src="2025_11_13_19_14_01.jpg" alt="借阅管理" onclick="openModal(this, '借阅管理', '图书借阅和归还管理系统')">
                     <div class="image-info">
                         <h3>借阅管理</h3>
                         <p>图书借阅和归还管理系统</p>
                         <div class="image-meta">
                             <span class="image-size">借阅系统</span>
-                            <a href="2025_11_13_19_14_01.jpg" class="view-full" target="_blank">
-                                <i class="fas fa-expand"></i> 查看原图
-                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_19_14_12.jpg" alt="读者管理" onclick="openModal(this)">
+                    <img src="2025_11_13_19_14_12.jpg" alt="读者管理" onclick="openModal(this, '读者管理', '读者信息管理和权限设置')">
                     <div class="image-info">
                         <h3>读者管理</h3>
                         <p>读者信息管理和权限设置</p>
                         <div class="image-meta">
                             <span class="image-size">读者系统</span>
-                            <a href="2025_11_13_19_14_12.jpg" class="view-full" target="_blank">
-                                <i class="fas fa-expand"></i> 查看原图
-                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_19_14_31.jpg" alt="统计报表" onclick="openModal(this)">
+                    <img src="2025_11_13_19_14_31.jpg" alt="统计报表" onclick="openModal(this, '统计报表', '图书借阅统计和数据分析')">
                     <div class="image-info">
                         <h3>统计报表</h3>
                         <p>图书借阅统计和数据分析</p>
                         <div class="image-meta">
                             <span class="image-size">统计功能</span>
-                            <a href="2025_11_13_19_14_31.jpg" class="view-full" target="_blank">
-                                <i class="fas fa-expand"></i> 查看原图
-                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_19_14_43.jpg" alt="系统设置" onclick="openModal(this)">
+                    <img src="2025_11_13_19_14_43.jpg" alt="系统设置" onclick="openModal(this, '系统设置', '系统参数配置和管理设置')">
                     <div class="image-info">
                         <h3>系统设置</h3>
                         <p>系统参数配置和管理设置</p>
                         <div class="image-meta">
                             <span class="image-size">系统配置</span>
-                            <a href="2025_11_13_19_14_43.jpg" class="view-full" target="_blank">
-                                <i class="fas fa-expand"></i> 查看原图
-                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_19_14_54.jpg" alt="用户中心" onclick="openModal(this)">
+                    <img src="2025_11_13_19_14_54.jpg" alt="用户中心" onclick="openModal(this, '用户中心', '个人信息管理和借阅历史')">
                     <div class="image-info">
                         <h3>用户中心</h3>
                         <p>个人信息管理和借阅历史</p>
                         <div class="image-meta">
                             <span class="image-size">用户中心</span>
-                            <a href="2025_11_13_19_14_54.jpg" class="view-full" target="_blank">
-                                <i class="fas fa-expand"></i> 查看原图
-                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_19_15_08.jpg" alt="图书详情" onclick="openModal(this)">
+                    <img src="2025_11_13_19_15_08.jpg" alt="图书详情" onclick="openModal(this, '图书详情', '图书详细信息展示页面')">
                     <div class="image-info">
                         <h3>图书详情</h3>
                         <p>图书详细信息展示页面</p>
                         <div class="image-meta">
                             <span class="image-size">详情页面</span>
-                            <a href="2025_11_13_19_15_08.jpg" class="view-full" target="_blank">
-                                <i class="fas fa-expand"></i> 查看原图
-                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_19_15_19.jpg" alt="借阅记录" onclick="openModal(this)">
+                    <img src="2025_11_13_19_15_19.jpg" alt="借阅记录" onclick="openModal(this, '借阅记录', '个人借阅历史和记录查询')">
                     <div class="image-info">
                         <h3>借阅记录</h3>
                         <p>个人借阅历史和记录查询</p>
                         <div class="image-meta">
                             <span class="image-size">借阅记录</span>
-                            <a href="2025_11_13_19_15_19.jpg" class="view-full" target="_blank">
-                                <i class="fas fa-expand"></i> 查看原图
-                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_19_15_33.jpg" alt="图书分类" onclick="openModal(this)">
+                    <img src="2025_11_13_19_15_33.jpg" alt="图书分类" onclick="openModal(this, '图书分类', '图书分类管理和浏览功能')">
                     <div class="image-info">
                         <h3>图书分类</h3>
                         <p>图书分类管理和浏览功能</p>
                         <div class="image-meta">
                             <span class="image-size">分类管理</span>
-                            <a href="2025_11_13_19_15_33.jpg" class="view-full" target="_blank">
-                                <i class="fas fa-expand"></i> 查看原图
-                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_19_15_51.jpg" alt="推荐系统" onclick="openModal(this)">
+                    <img src="2025_11_13_19_15_51.jpg" alt="推荐系统" onclick="openModal(this, '推荐系统', '智能图书推荐和热门书籍')">
                     <div class="image-info">
                         <h3>推荐系统</h3>
                         <p>智能图书推荐和热门书籍</p>
                         <div class="image-meta">
                             <span class="image-size">推荐功能</span>
-                            <a href="2025_11_13_19_15_51.jpg" class="view-full" target="_blank">
-                                <i class="fas fa-expand"></i> 查看原图
-                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_19_16_05.jpg" alt="数据备份" onclick="openModal(this)">
+                    <img src="2025_11_13_19_16_05.jpg" alt="数据备份" onclick="openModal(this, '数据备份', '系统数据备份和恢复功能')">
                     <div class="image-info">
                         <h3>数据备份</h3>
                         <p>系统数据备份和恢复功能</p>
                         <div class="image-meta">
                             <span class="image-size">备份功能</span>
-                            <a href="2025_11_13_19_16_05.jpg" class="view-full" target="_blank">
-                                <i class="fas fa-expand"></i> 查看原图
-                            </a>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_20_43_52.jpg" alt="系统监控" onclick="openModal(this)">
+                    <img src="2025_11_13_20_43_52.jpg" alt="系统监控" onclick="openModal(this, '系统监控', '系统运行状态监控和性能分析')">
                     <div class="image-info">
                         <h3>系统监控</h3>
                         <p>系统运行状态监控和性能分析</p>
                         <div class="image-meta">
                             <span class="image-size">系统监控</span>
-                            <a href="2025_11_13_20_43_52.jpg" class="view-full" target="_blank">
-                                <i class="fas fa-expand"></i> 查看原图
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -498,16 +455,25 @@
         <span class="close" onclick="closeModal()">&times;</span>
         <div class="modal-content">
             <img id="modalImage" src="" alt="">
+            <div class="modal-text" id="modalText">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+            </div>
         </div>
     </div>
 
     <script>
-        function openModal(img) {
+        function openModal(img, title, description) {
             const modal = document.getElementById('imageModal');
             const modalImg = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDescription = document.getElementById('modalDescription');
+            
             modal.style.display = 'block';
             modalImg.src = img.src;
             modalImg.alt = img.alt;
+            modalTitle.textContent = title;
+            modalDescription.textContent = description;
         }
 
         function closeModal() {

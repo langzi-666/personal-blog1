@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>学生管理系统 - 功能模块截图</title>
+    <title>宠物领养系统 - 系统截图</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -16,67 +16,67 @@
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
             line-height: 1.6;
-            background: #0a0a0a;
+            background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
             min-height: 100vh;
-            color: #ffffff;
+            color: #333;
         }
         
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
         }
         
         .back-link {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(255, 255, 255, 0.05);
-            color: #ffffff;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
             padding: 12px 24px;
             text-decoration: none;
-            border-radius: 12px;
-            margin-bottom: 60px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             transition: all 0.3s ease;
-            font-weight: 400;
-            font-size: 14px;
+            font-weight: 500;
         }
         
         .back-link:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-1px);
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
         }
         
-        .hero {
-            text-align: center;
-            margin-bottom: 80px;
-            padding: 60px 0;
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #fff, #f8e7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 300;
-            margin-bottom: 24px;
-            color: #ffffff;
-            letter-spacing: -0.02em;
-        }
-        
-        .hero p {
+        .header p {
             font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.6);
-            max-width: 500px;
-            margin: 0 auto;
+            opacity: 0.9;
             font-weight: 300;
-            line-height: 1.8;
         }
         
         .gallery-container {
-            background: rgba(255, 255, 255, 0.02);
-            border-radius: 16px;
-            padding: 60px 40px;
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
         }
         
         .gallery-grid {
@@ -88,16 +88,16 @@
         
         .image-card {
             position: relative;
-            border-radius: 12px;
+            border-radius: 15px;
             overflow: hidden;
-            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: white;
         }
         
         .image-card:hover {
-            background: rgba(255, 255, 255, 0.08);
-            transform: translateY(-4px);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
         
         .image-card img {
@@ -113,18 +113,19 @@
         }
         
         .image-info {
-            padding: 24px;
+            padding: 20px;
+            background: white;
         }
         
         .image-info h3 {
-            color: #ffffff;
+            color: #2d3748;
             margin-bottom: 8px;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 1.1rem;
         }
         
         .image-info p {
-            color: rgba(255, 255, 255, 0.6);
+            color: #718096;
             font-size: 0.9rem;
             line-height: 1.5;
         }
@@ -133,17 +134,16 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 16px;
-            padding-top: 16px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e2e8f0;
         }
         
         .image-size {
             font-size: 0.8rem;
-            color: rgba(255, 255, 255, 0.4);
+            color: #a0aec0;
         }
         
-        /* 模态框样式 */
         .modal {
             display: none;
             position: fixed;
@@ -213,29 +213,20 @@
         }
         
         .close:hover {
-            color: #ccc;
+            color: #d8b4fe;
         }
         
         @media (max-width: 768px) {
             .container {
-                padding: 20px 16px;
+                padding: 15px;
             }
             
-            .hero {
-                padding: 40px 0;
-                margin-bottom: 60px;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
+            .header h1 {
+                font-size: 2rem;
             }
             
             .gallery-container {
-                padding: 40px 24px;
+                padding: 25px;
             }
             
             .gallery-grid {
@@ -257,134 +248,79 @@
 </head>
 <body>
     <div class="container">
-        <a href="../../student-system.html" class="back-link">
+        <a href="../index.html" class="back-link">
             <i class="fas fa-arrow-left"></i> 返回系统介绍
         </a>
         
-        <div class="hero">
-            <h1>功能模块截图</h1>
-            <p>学生管理系统各功能模块详细展示</p>
+        <div class="header">
+            <h1>宠物领养系统截图</h1>
+            <p>呈现前台领养流程与后台管理的关键界面</p>
         </div>
 
         <div class="gallery-container">
             <div class="gallery-grid">
                 <div class="image-card">
-                    <img src="2025_11_13_21_34_12.jpg" alt="模块界面1" onclick="openModal(this, '模块界面1', '系统核心功能模块展示')">
+                    <img src="../首页.png" alt="系统首页" onclick="openModal(this, '系统首页', '展示最新待领养宠物、暖心故事与公益活动。')">
                     <div class="image-info">
-                        <h3>模块界面1</h3>
-                        <p>系统核心功能模块展示</p>
+                        <h3>系统首页</h3>
+                        <p>展示最新待领养宠物、暖心故事与公益活动。</p>
                         <div class="image-meta">
-                            <span class="image-size">功能模块</span>
+                            <span class="image-size">门户页面</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_21_34_51.jpg" alt="模块界面2" onclick="openModal(this, '模块界面2', '用户管理和权限控制功能')">
+                    <img src="../关于页面.png" alt="关于页面" onclick="openModal(this, '关于平台', '介绍项目愿景、合作机构与领养流程说明。')">
                     <div class="image-info">
-                        <h3>模块界面2</h3>
-                        <p>用户管理和权限控制功能</p>
+                        <h3>关于平台</h3>
+                        <p>介绍项目愿景、合作机构与领养流程说明。</p>
                         <div class="image-meta">
-                            <span class="image-size">权限管理</span>
+                            <span class="image-size">平台介绍</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_21_35_08.jpg" alt="模块界面3" onclick="openModal(this, '模块界面3', '数据录入和编辑功能界面')">
+                    <img src="../宠物列表.png" alt="宠物列表" onclick="openModal(this, '宠物列表', '按品种、年龄、地区等条件筛选可领养的宠物。')">
                     <div class="image-info">
-                        <h3>模块界面3</h3>
-                        <p>数据录入和编辑功能界面</p>
+                        <h3>宠物列表</h3>
+                        <p>按品种、年龄、地区等条件筛选可领养的宠物。</p>
                         <div class="image-meta">
-                            <span class="image-size">数据管理</span>
+                            <span class="image-size">列表页</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_21_35_26.jpg" alt="模块界面4" onclick="openModal(this, '模块界面4', '查询和搜索功能展示')">
+                    <img src="../宠物详情.png" alt="宠物详情" onclick="openModal(this, '宠物详情', '展示宠物健康状况、性格标签与领养条件。')">
                     <div class="image-info">
-                        <h3>模块界面4</h3>
-                        <p>查询和搜索功能展示</p>
+                        <h3>宠物详情</h3>
+                        <p>展示宠物健康状况、性格标签与领养条件。</p>
                         <div class="image-meta">
-                            <span class="image-size">查询功能</span>
+                            <span class="image-size">详情页</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_21_35_37.jpg" alt="模块界面5" onclick="openModal(this, '模块界面5', '系统配置和设置界面')">
+                    <img src="../发布宠物.png" alt="发布宠物" onclick="openModal(this, '发布宠物', '救助站或志愿者上传宠物资料、体检记录与期望领养人。')">
                     <div class="image-info">
-                        <h3>模块界面5</h3>
-                        <p>系统配置和设置界面</p>
+                        <h3>发布宠物</h3>
+                        <p>救助站或志愿者上传宠物资料、体检记录与期望领养人。</p>
                         <div class="image-meta">
-                            <span class="image-size">系统设置</span>
+                            <span class="image-size">救助端</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="image-card">
-                    <img src="2025_11_13_21_35_57.jpg" alt="模块界面6" onclick="openModal(this, '模块界面6', '报表生成和导出功能')">
+                    <img src="../管理员页面.png" alt="管理员页面" onclick="openModal(this, '管理员控制台', '处理领养申请、审核资料、管理活动与内容审核。')">
                     <div class="image-info">
-                        <h3>模块界面6</h3>
-                        <p>报表生成和导出功能</p>
+                        <h3>管理员控制台</h3>
+                        <p>处理领养申请、审核资料、管理活动与内容审核。</p>
                         <div class="image-meta">
-                            <span class="image-size">报表功能</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="image-card">
-                    <img src="2025_11_13_21_36_16.jpg" alt="模块界面7" onclick="openModal(this, '模块界面7', '数据统计和分析界面')">
-                    <div class="image-info">
-                        <h3>模块界面7</h3>
-                        <p>数据统计和分析界面</p>
-                        <div class="image-meta">
-                            <span class="image-size">数据分析</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="image-card">
-                    <img src="2025_11_13_21_36_27.jpg" alt="模块界面8" onclick="openModal(this, '模块界面8', '系统监控和日志管理')">
-                    <div class="image-info">
-                        <h3>模块界面8</h3>
-                        <p>系统监控和日志管理</p>
-                        <div class="image-meta">
-                            <span class="image-size">系统监控</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="image-card">
-                    <img src="2025_11_13_21_36_53.jpg" alt="模块界面9" onclick="openModal(this, '模块界面9', '用户界面和交互设计')">
-                    <div class="image-info">
-                        <h3>模块界面9</h3>
-                        <p>用户界面和交互设计</p>
-                        <div class="image-meta">
-                            <span class="image-size">界面设计</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="image-card">
-                    <img src="2025_11_13_21_37_08.jpg" alt="模块界面10" onclick="openModal(this, '模块界面10', '高级功能和扩展模块')">
-                    <div class="image-info">
-                        <h3>模块界面10</h3>
-                        <p>高级功能和扩展模块</p>
-                        <div class="image-meta">
-                            <span class="image-size">高级功能</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="image-card">
-                    <img src="2025_11_13_21_37_21.jpg" alt="模块界面11" onclick="openModal(this, '模块界面11', '系统整体架构和流程展示')">
-                    <div class="image-info">
-                        <h3>模块界面11</h3>
-                        <p>系统整体架构和流程展示</p>
-                        <div class="image-meta">
-                            <span class="image-size">系统架构</span>
+                            <span class="image-size">后台管理</span>
                         </div>
                     </div>
                 </div>
@@ -392,7 +328,6 @@
         </div>
     </div>
 
-    <!-- 模态框 -->
     <div id="imageModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
         <div class="modal-content">
@@ -423,7 +358,6 @@
             modal.style.display = 'none';
         }
 
-        // 点击模态框背景关闭
         window.onclick = function(event) {
             const modal = document.getElementById('imageModal');
             if (event.target === modal) {
@@ -431,7 +365,6 @@
             }
         }
 
-        // ESC键关闭模态框
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 closeModal();
@@ -440,3 +373,4 @@
     </script>
 </body>
 </html>
+
